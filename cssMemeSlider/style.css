@@ -37,7 +37,7 @@
 }
 
 .pagination {  
-    background-color: brown;
+    
     width: 100px;
     margin-top: 40px;
     margin-left: auto;
@@ -46,7 +46,7 @@
 }
 
 .pagination_block {
-    background-color: green;
+    
     width: 32px;
     height: 32px;
     box-sizing: border-box;
@@ -79,6 +79,16 @@ button:hover {
     text-decoration: none;
     background-color: pink;
 }
+
+ul {
+    list-style-type: none;
+}
+
+.memes_text {
+    display: flex;
+    color: aliceblue;
+}
+
 
 @media screen and (max-width: 768px) {
     .pagination {
