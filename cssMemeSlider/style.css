@@ -24,6 +24,10 @@
     overflow: hidden;
 }
 
+input[name="slider"] {
+    display: none;
+}
+
 .slider_images {
     width: 400%;    
     display: flex;
@@ -48,19 +52,18 @@
     gap: 2vw;
 }
 
-input[name="slider"] {
-    display: none;
-}
-
 .label_area {
+    box-sizing: content-box;
     width: 1em;
     height: 1em;
-    background: blue;
+    background-color: blue;
+    background-clip: content-box;
     border-radius: 50%;
+    padding: 0.5em;
 }
 
 .label_area:hover {
-        cursor: pointer;
+    cursor: pointer;
 }
 
 #slider_image1:checked ~.slider_panel label[for="slider_image1"],
@@ -68,7 +71,8 @@ input[name="slider"] {
 #slider_image3:checked ~.slider_panel label[for="slider_image3"],
 #slider_image4:checked ~.slider_panel label[for="slider_image4"] {
     background-color: gray;
-    border: 0.1em solid white;
+    outline: 0.1em solid white;
+    outline-offset: -0.5em;
 }
 
 #slider_image1:checked ~ .slider_images {
@@ -149,11 +153,14 @@ input[name="slider"] {
     #slider_image3:checked ~ .slider_panel label[for="slider_image3"],
     #slider_image4:checked ~ .slider_panel label[for="slider_image4"]
     {
-        border: 0.2em solid blue;
+        outline: 0.1em solid blue;
     }
 
     .label_area:hover {
-        background: white;
+        background-color: white;
+        background-clip: content-box;
+        border-radius: 50%; 
+        padding: 0.5em;
     }
 
     #slider_image1:checked ~ .slider_panel label[for="slider_image1"]:hover,
@@ -161,6 +168,6 @@ input[name="slider"] {
     #slider_image3:checked ~ .slider_panel label[for="slider_image3"]:hover,
     #slider_image4:checked ~ .slider_panel label[for="slider_image4"]:hover
     {
-        border: 0.2em solid white;
+        outline: 0.1em solid white;
     }
 }
