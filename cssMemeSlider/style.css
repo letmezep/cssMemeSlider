@@ -51,22 +51,22 @@ input[name="slider"] {
 }
 
 .label_area {
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     background: blue;
     border-radius: 50%;
 }
 
 .label_area:hover {
         cursor: pointer;
-    }
+}
 
 #slider_image1:checked ~.slider_panel label[for="slider_image1"],
 #slider_image2:checked ~.slider_panel label[for="slider_image2"],
 #slider_image3:checked ~.slider_panel label[for="slider_image3"],
 #slider_image4:checked ~.slider_panel label[for="slider_image4"] {
     background-color: gray;
-    border: 0.2em solid white;
+    border: 0.1em solid white;
 }
 
 #slider_image1:checked ~ .slider_images {
@@ -106,7 +106,18 @@ input[name="slider"] {
     #slider_image3:checked ~ .slider_panel label[for="slider_image3"],
     #slider_image4:checked ~ .slider_panel label[for="slider_image4"]
     {
-        background-color: white;
+        border: 0.2em solid blue;
     }
 
+    .label_area:hover {
+        background: white;
+    }
+
+    #slider_image1:checked ~ .slider_panel label[for="slider_image1"]:hover,
+    #slider_image2:checked ~ .slider_panel label[for="slider_image2"]:hover,
+    #slider_image3:checked ~ .slider_panel label[for="slider_image3"]:hover,
+    #slider_image4:checked ~ .slider_panel label[for="slider_image4"]:hover
+    {
+        border: 0.2em solid white;
+    }
 }
