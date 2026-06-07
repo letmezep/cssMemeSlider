@@ -57,6 +57,10 @@ input[name="slider"] {
     border-radius: 50%;
 }
 
+.label_area:hover {
+        cursor: pointer;
+    }
+
 #slider_image1:checked ~.slider_panel label[for="slider_image1"],
 #slider_image2:checked ~.slider_panel label[for="slider_image2"],
 #slider_image3:checked ~.slider_panel label[for="slider_image3"],
@@ -81,11 +85,18 @@ input[name="slider"] {
     transform: translateX(-75%);
 }
 
-@media screen and (min-width: 768px) {
-    .label_area:hover {
-        cursor: pointer;
-    }
+.slide_text {
+    display: none;
+}
 
+#slider_image1:checked ~ .text_block .text1,
+#slider_image2:checked ~ .text_block .text2,
+#slider_image3:checked ~ .text_block .text3,
+#slider_image4:checked ~ .text_block .text4 {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
     .slider_panel {
         justify-content: flex-end;
     }
